@@ -57,8 +57,8 @@ document.querySelectorAll('.theme-card').forEach(card=>card.onclick=()=>{
   localStorage.setItem('deck-theme',card.dataset.theme);
   setTimeout(closeTheme,280);
 });
-const savedTheme=localStorage.getItem('deck-theme')||'editorial';
-document.body.dataset.theme=savedTheme==='cinematic'?'':savedTheme;
+const savedTheme='strategy';
+document.body.dataset.theme=savedTheme;
 document.querySelectorAll('.theme-card').forEach(c=>c.classList.toggle('active',c.dataset.theme===savedTheme));
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){closeOverview();closeTheme()}
